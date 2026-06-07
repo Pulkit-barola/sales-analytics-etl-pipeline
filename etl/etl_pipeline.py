@@ -1,5 +1,5 @@
 import pandas as pd
-from SQLAlchemy import create_engine
+from sqlalchemy import create_engine
 import logging
 import os
 

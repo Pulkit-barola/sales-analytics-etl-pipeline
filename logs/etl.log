@@ -1,0 +1,9 @@
+2026-06-07 13:39:10,685 - INFO - ETL Pipeline Started
+2026-06-07 13:39:10,907 - INFO - Original Rows: 9994
+2026-06-07 13:39:11,060 - INFO - Duplicate Rows Found: 17
+2026-06-07 13:39:11,060 - INFO - Null Values Found: 0
+2026-06-07 13:39:11,194 - INFO - Cleaned Rows: 9977
+2026-06-07 13:39:11,926 - INFO - Data Loaded Successfully into SQLite
+2026-06-07 13:39:11,926 - INFO - Total Sales: 2296195.59
+2026-06-07 13:39:11,926 - INFO - Total Profit: 286241.42
+2026-06-07 13:39:11,926 - INFO - ETL Pipeline Completed Successfully

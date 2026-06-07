@@ -1,166 +1,167 @@
 # 📊 Sales Analytics ETL Pipeline
 
-An end-to-end Data Engineering project that extracts, transforms, and loads retail sales data into a relational database and provides interactive business insights through a Streamlit dashboard.
+[![Python](https://img.shields.io/badge/Python-3.12-blue)]()
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)]()
+[![SQLite](https://img.shields.io/badge/SQLite-Database-green)]()
+[![ETL](https://img.shields.io/badge/Data%20Engineering-ETL-orange)]()
+
+## 🚀 Live Demo
+
+🌐 Live Application: https://sales-analytics-etl-pipeline-1.onrender.com/
 
 ---
 
-## 🚀 Project Overview
+# 📌 Project Overview
 
-This project demonstrates a complete ETL (Extract, Transform, Load) workflow using Python, Pandas, SQLite, and Streamlit.
+Sales Analytics ETL Pipeline is an end-to-end Data Engineering project that extracts raw retail sales data, performs data cleaning and transformation, stores processed data in SQLite, and visualizes business insights through an interactive Streamlit dashboard.
 
-The pipeline ingests raw retail sales data, performs data quality checks and transformations, stores the processed data in a database, and visualizes key business metrics through an interactive analytics dashboard.
+The project demonstrates real-world ETL concepts, data quality checks, database integration, and analytics reporting.
 
 ---
 
-## 🏗️ Architecture
+# 🏗️ Architecture
 
 ```text
 Sample Superstore Dataset
-            │
-            ▼
-      ETL Pipeline
-   (Python + Pandas)
-            │
-            ▼
- Data Cleaning & Validation
-            │
-            ▼
-  Feature Engineering Layer
-            │
-            ▼
+           │
+           ▼
+      Extract Data
+           │
+           ▼
+    Data Validation
+           │
+           ▼
+   Data Cleaning &
+   Transformation
+           │
+           ▼
      SQLite Database
-            │
-            ▼
-   Streamlit Dashboard
-            │
-            ▼
- Interactive Business Insights
+           │
+           ▼
+ Streamlit Dashboard
+           │
+           ▼
+ Business Insights
 ```
 
 ---
 
-## ✨ Features
+# ✨ Key Features
 
-### Data Engineering
+### ETL Pipeline
 
-* Data Extraction from CSV files
-* Duplicate Record Detection & Removal
-* Null Value Validation
-* Data Quality Checks
-* Feature Engineering
-* Automated ETL Workflow
-* SQLite Data Storage
-* ETL Logging
+- Extract data from CSV dataset
+- Perform data quality checks
+- Remove duplicate records
+- Handle missing values
+- Feature engineering
+- Load transformed data into SQLite database
+- ETL execution logging
 
-### Analytics
+### Analytics Dashboard
 
-* Sales Performance Analysis
-* Profitability Analysis
-* Category-Level Insights
-* Region-Level Insights
-* Segment-Level Insights
-* State-Wise Sales Rankings
-
-### Dashboard
-
-* Interactive KPI Cards
-* Dynamic Filtering
-* Plotly Visualizations
-* CSV Export Functionality
-* Responsive Layout
+- Interactive KPI cards
+- Sales Analysis
+- Profit Analysis
+- Region Wise Performance
+- Category Wise Sales
+- Segment Distribution
+- Top States Analysis
+- Dynamic Filters
+- CSV Export Functionality
 
 ---
 
-## 📈 Dashboard Metrics
+# 📈 Dashboard Metrics
 
 The dashboard provides:
 
-* Total Sales
-* Total Profit
-* Total Orders
-* Average Discount
+- Total Sales
+- Total Profit
+- Total Orders
+- Average Discount
 
-Additional Insights:
+Business Insights:
 
-* Category Wise Sales
-* Region Wise Profit
-* Top 10 States by Sales
-* Segment Distribution
-* Category Distribution
+- Category Wise Sales
+- Region Wise Profit
+- Segment Distribution
+- Sales Distribution by Category
+- Top 10 States by Sales
 
 ---
 
-## ⚙️ ETL Transformations
-
-The ETL process performs:
+# ⚙️ ETL Transformations
 
 ### Data Cleaning
 
-* Duplicate Removal
-* Null Value Handling
-* Data Validation
+- Duplicate Detection
+- Duplicate Removal
+- Null Value Validation
+- Data Quality Checks
 
 ### Feature Engineering
 
 Generated Columns:
 
-| Column              | Description                                          |
-| ------------------- | ---------------------------------------------------- |
-| Revenue_per_Item    | Revenue generated per unit sold                      |
-| Profit_Margin       | Profit percentage per transaction                    |
-| Discount_Percentage | Discount value converted to percentage               |
-| Sales_Category      | Low / Medium / High / Very High sales classification |
+| Column | Description |
+|----------|-------------|
+| Revenue_per_Item | Revenue generated per product |
+| Profit_Margin | Profit percentage per transaction |
+| Discount_Percentage | Discount converted into percentage |
+| Sales_Category | Sales classification (Low, Medium, High, Very High) |
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Programming
 
-* Python
+- Python
 
 ### Data Processing
 
-* Pandas
+- Pandas
 
 ### Database
 
-* SQLite
-* SQLAlchemy
+- SQLite
+- SQLAlchemy
 
-### Visualization
+### Dashboard
 
-* Streamlit
-* Plotly
+- Streamlit
+- Plotly
 
-### Data Engineering Concepts
+### Concepts
 
-* ETL Pipelines
-* Data Validation
-* Data Cleaning
-* Feature Engineering
-* Data Analytics
+- ETL Pipeline
+- Data Cleaning
+- Data Validation
+- Data Transformation
+- Feature Engineering
+- Business Analytics
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
-sales-data-etl/
+sales-analytics-etl-pipeline
 │
-├── data/
-│   └── SampleSuperstore.csv
-│
-├── database/
-│   └── sales.db
-│
-├── dashboard/
+├── dashboard
 │   └── app.py
 │
-├── etl/
+├── data
+│   └── SampleSuperstore.csv
+│
+├── database
+│   └── sales.db
+│
+├── etl
 │   └── etl_pipeline.py
 │
-├── logs/
+├── logs
 │   └── etl.log
 │
 ├── requirements.txt
@@ -170,28 +171,33 @@ sales-data-etl/
 
 ---
 
-## ▶️ Running the Project
+# ▶️ Installation
 
-### Clone Repository
+Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd sales-data-etl
+git clone https://github.com/Pulkit-barola/sales-analytics-etl-pipeline.git
 ```
 
-### Install Dependencies
+Move into project directory:
+
+```bash
+cd sales-analytics-etl-pipeline
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run ETL Pipeline
+Run ETL Pipeline:
 
 ```bash
 python etl/etl_pipeline.py
 ```
 
-### Launch Dashboard
+Launch Dashboard:
 
 ```bash
 streamlit run dashboard/app.py
@@ -199,45 +205,58 @@ streamlit run dashboard/app.py
 
 ---
 
-## 📊 Sample Workflow
+# 📊 Business Insights Generated
 
-```text
-Raw Sales Dataset
-        │
-        ▼
-Data Validation
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
-Feature Engineering
-        │
-        ▼
-SQLite Storage
-        │
-        ▼
-Interactive Dashboard
-```
+The dashboard helps answer:
+
+- Which product category generates the highest revenue?
+- Which region contributes the most profit?
+- Which states drive maximum sales?
+- Which customer segment contributes most to revenue?
+- How do discounts impact profitability?
 
 ---
 
-## 🎯 Learning Outcomes
+# 🎯 Skills Demonstrated
 
-This project demonstrates practical experience with:
-
-* Data Engineering Fundamentals
-* ETL Pipeline Development
-* Database Integration
-* Data Quality Management
-* Analytics Dashboard Development
-* SQL-Based Data Storage
-* Business Intelligence Reporting
+- Data Engineering Fundamentals
+- ETL Pipeline Development
+- Data Cleaning & Validation
+- SQL & Database Management
+- Analytics Dashboard Development
+- Business Intelligence Reporting
+- Python Data Processing
 
 ---
 
-## 👨‍💻 Author
+# 📷 Project Screenshots
 
-Pulkit Barola
+Add dashboard screenshots here:
 
-Aspiring Data Engineer | Cloud & DevOps Enthusiast | AWS Practitioner
+### Dashboard Overview
+
+![Dashboard Screenshot](images/dashboard.png)
+
+### Sales Analytics
+
+![Analytics Screenshot](images/analytics.png)
+
+---
+
+# 👨‍💻 Author
+
+**Pulkit Barola**
+
+Aspiring Data Engineer | Cloud & Data Enthusiast
+
+GitHub: https://github.com/Pulkit-barola
+
+---
+
+# ⭐ Future Enhancements
+
+- AWS S3 Integration
+- Automated ETL Scheduling
+- PostgreSQL Migration
+- Real-Time Data Pipeline
+- Data Warehouse Integration
